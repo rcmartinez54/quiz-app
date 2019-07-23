@@ -46,3 +46,9 @@ ul {
     width: 100%;
     justify-content: space-evenly;
 }
+
+@media only screen and (max-width: 600px) {
+    p {
+        font-size: 28px;
+    }
+}
