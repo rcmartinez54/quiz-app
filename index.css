@@ -2,6 +2,10 @@
     box-sizing: content-box;
 }
 
+body {
+    background: url('https://unsplash.com/photos/JNz9bQD3Oio');
+}
+
 .header {
     display: flex;
     justify-content: space-evenly;
@@ -29,6 +33,23 @@ main {
     font-size: 28px;
     background-color: lightblue;
     padding: 20px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+}
+
+label {
+    padding: 20px;
+    background-color: lightblue;
+    font-size: 28px;
+    border-radius: 5px;
 }
 
 footer {
