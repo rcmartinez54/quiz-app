@@ -1,10 +1,11 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 body {
     background: url('img/JavaScript.jpg') no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .header {
@@ -16,7 +17,7 @@ body {
     font-family: 'Roboto', Sans-Serif;
 }
 
-h1, h2, span, button {
+h1, span, button {
     font-family: 'Droid Serif', Serif;
 }
 
@@ -24,14 +25,18 @@ h1 {
     color: #fff;
 }
 
+h2 {
+    font-family: 'Roboto', Sans-Serif; 
+}
+
 p {
-    font-size: 55px;
+    font-size: 28px;
     margin: 0;
     color: #fff;
 }
 
 main {
-    height: 70vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,14 +53,52 @@ main {
 
 .startBtn {
     border: 2px solid yellow;
+    border-radius: 5px;
     font-size: 28px;
     background: transparent;
-    /* font-family: 'Droid Serif', Serif; */
     padding: 20px;
     color: #fff;
+    cursor: pointer;
 }
 
+.startBtn:hover {
+    background: yellow;
+    color: #000;
+    transition: all 1s;
+}
 
+#submit-btn {
+    background: yellow;
+    color: #000;
+    font-size: 22px;
+    border: 1px solid purple;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background: purple;
+    color: #fff;
+    transition: all 1s;
+}
+
+#next-btn {
+    background: transparent;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#next-btn:hover {
+    background: yellow;
+    color: black;
+    transition: all 1s;
+}
 
 h2 {
     display: flex;
@@ -71,20 +114,23 @@ fieldset {
 
 label {
     padding: 20px;
-    background-color: lightblue;
+    background: transparent;
     font-size: 28px;
+    border: 2px solid yellow;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 span {
-    /* font-family: 'Droid Serif', Serif; */
+    color: #fff;
+    margin-left: 15px;
 }
 
 #score {
     display: flex;
     justify-content: center;
     width: 100%;
+    font-size: 28px;
 }
 
 ul {
