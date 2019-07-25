@@ -184,11 +184,20 @@ function showResults(correct) {
     `);
 }
 
+function restartQuiz() {
+    $('.questionAndAnswers').on('click', '#restart-btn', function() {
+        questionNumber = 1;
+        correct = 0;
+        getQuestion();
+    });
+}
+
 function quizHandler() {
     // this function will handle all associated functions
     startQuiz();
     handleSubmitBtn();
     nextQuestion();
+    restartQuiz();
 }
 
 $(quizHandler);
