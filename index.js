@@ -23,6 +23,15 @@ const myQuestions = [
     },
     {
         number: 3,
+        text: `What will this log to the console?`,
+        img: `<img src="img/map.png">`,
+        answer1: `1, 2, 3, 4`,
+        answer2: `8, 6, 4, 2`,
+        answer3: `4, 6, 8, 10`,
+        answer4: `4, 8, 12, 16`
+    },
+    {
+        number: 4,
         text: `What does .push( ) do?`,
         answer1: `forces the function to work by pushing it along`,
         answer2: `adds an element to the end of an array and returns the new array with the new element`,
@@ -30,7 +39,7 @@ const myQuestions = [
         answer4: `makes sure the array isn’t pushed around by any bigger arrays `
     },
     {
-        number: 4,
+        number: 5,
         text: `What does .find( ) do?`,
         answer1: `returns the value of the last element in the array that satisfies the provided function`,
         answer2: `alooks for the best option to complete the function without any issues`,
@@ -38,7 +47,7 @@ const myQuestions = [
         answer4: `if you type .find(answer) it will give you the solution if you are stuck`
     },
     {
-        number: 5,
+        number: 6,
         text: `What does .reduce( ) do?`,
         answer1: `executes a provided reducer function on each element of an array, resulting in a single output value`,
         answer2: `if you use .reduce(stress) you will automatically feel better`,
@@ -51,9 +60,11 @@ const myQuestions = [
 const ANS = [
     `executes a provided function once for each array element`,
     `by creating a new array with the results of calling a provided function on every element in the calling array`,
+    `4, 8, 12, 16`,
     `adds an element to the end of an array and returns the new array with the new element`,
-    ``,
-    ``
+    `returns the value of the first element in the array that satisfies the provided function`,
+    `executes a provided reducer function on each element of an array, resulting in a single output value`
+    
 ]
 
 function startQuiz() {
@@ -75,7 +86,7 @@ function getQuestion() {
 function questionTemp(correct, question, questionsAnswered) {
     return `
             <h2 id="question">${question.text}</h2>
-            <img src="${question.img}" alt="array method example">
+            ${question.img && `<img src="${question.img}">`} 
             <form>
                 <fieldset>
                     <label>
@@ -98,6 +109,11 @@ function questionTemp(correct, question, questionsAnswered) {
                 <button id="submit-btn">Submit</button>
             
             </form>
+
+            <div id="score">
+                <span id="question-count">Question: ${question.number}/6</span>
+                <span id="score-count">Score: ${correct}/${questionsAnswered}</span>
+            </div>
     `
 }
 
@@ -130,7 +146,7 @@ function generateCorrect() {
 const correctFeedback = `
     <div class="user-feedback-page" role="main">
         <h2>That is Correct!</h2>
-        <img src="#" alt="positive picture">
+        <img src="img/thumbs-up.png" alt="positive picture">
         <button id="next-btn">Next</button>
     </div>
 `;
@@ -143,7 +159,7 @@ function incorrectFeedbackTemp(questionNumber) {
     return `
         <div class="user-feedback-page" role="main">
             <h2>Sorry!  The answer is ${ANS[questionNumber - 1]}.</h2>
-            <img src="#" alt="man shrugging">
+            <img src="img/shrug.png" alt="man shrugging">
             <button id="next-btn">Next</button>
         </div>
     `
@@ -160,7 +176,7 @@ function iterateCorrectAns() {
 function nextQuestion() {
     // this function will go to the next question
     $('.questionAndAnswers').on('click', '#next-btn', function(event) {
-        if(questionNumber === 5) {
+        if(questionNumber === 6) {
             showResults(correct);
         } else {
             iterateQuestion();
