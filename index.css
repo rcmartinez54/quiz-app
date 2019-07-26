@@ -103,7 +103,7 @@ main {
 h2 {
     display: flex;
     justify-content: center;
-    color: #fff;
+    color: #00fa9a;
     
 }
 
@@ -131,7 +131,7 @@ label:hover {
 
 
 span {
-    color: #fff;
+    color: #00fa9a;
     padding: 20px;
 }
 
