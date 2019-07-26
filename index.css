@@ -113,17 +113,34 @@ fieldset {
 }
 
 label {
-    padding: 20px;
+    display: flex;
+    align-items: center;
     background: transparent;
+    color: #000;
     font-size: 28px;
     border: 2px solid yellow;
     border-radius: 5px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
+
+label:hover {
+    background: rgba(255, 255, 179, 0.9);
+    transition: all 1s;
+}
+
 
 span {
     color: #fff;
-    margin-left: 15px;
+    padding: 20px;
+}
+
+span:hover {
+    color: #000;
+}
+
+.answer {
+    margin-left: 20px;
 }
 
 #score {
@@ -144,12 +161,22 @@ ul {
 .user-feedback-page {
     display: flex;
     flex-direction: column;
+    padding: 0 65px;
 }
 
 .user-feedback-page img,
 #next-btn {
     width: 250px;
     align-self: center;    
+}
+
+.feedback-heading {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.feedback-ans {
+    text-align: center;
 }
 
 footer {
