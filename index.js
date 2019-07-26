@@ -100,7 +100,7 @@ function questionTemp(correct, question, questionsAnswered) {
             </form>
 
             <div id="score">
-                <span id="question-count">Question: ${question.number}/6</span>
+                <span id="question-count">Question: ${question.number}/5</span>
                 <span id="score-count">Score: ${correct}/${questionsAnswered}</span>
             </div>
     `
@@ -134,7 +134,7 @@ function generateCorrect() {
 
 const correctFeedback = `
     <div class="user-feedback-page" role="main">
-        <h2>That is Correct!</h2>
+        <h2 class="feedback-heading">That is Correct!</h2>
         <img src="img/thumbsUp.png" alt="positive picture">
         <button id="next-btn">Next</button>
     </div>
@@ -147,8 +147,8 @@ function generateIncorrect() {
 function incorrectFeedbackTemp(questionNumber) {
     return `
         <div class="user-feedback-page" role="main">
-            <h2>No Luck, Sorry!</h2>
-            <p>The answer is: ${ANS[questionNumber - 1]}.</p>
+            <h2 class="feedback-heading">No Luck, Sorry!</h2>
+            <p class="feedback-ans">The answer is: ${ANS[questionNumber - 1]}.</p>
             <img src="img/shrug.png" alt="man shrugging">
             <button id="next-btn">Next</button>
         </div>
@@ -166,7 +166,7 @@ function iterateCorrectAns() {
 function nextQuestion() {
     // this function will go to the next question
     $('.questionAndAnswers').on('click', '#next-btn', function(event) {
-        if(questionNumber === 6) {
+        if(questionNumber === 5) {
             showResults(correct);
         } else {
             iterateQuestion();
