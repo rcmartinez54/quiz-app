@@ -179,6 +179,25 @@ ul {
     text-align: center;
 }
 
+.final-score {
+    display: flex;
+    flex-direction: column;
+}
+
+#restart-btn {
+    border: 2px solid yellow;
+    background: transparent;
+    color: #fff;
+    padding: 20px;
+    font-size: 28px;
+}
+
+#restart-btn:hover {
+    background: yellow;
+    color: #000;
+    transition: all 1s;
+}
+
 footer {
     display: flex;
     justify-content: center;
