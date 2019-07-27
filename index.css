@@ -75,7 +75,7 @@ main {
     border: 1px solid purple;
     border-radius: 5px;
     padding: 20px;
-    margin-left: 10px;
+    margin-left: 30px;
     cursor: pointer;
 }
 
@@ -83,6 +83,14 @@ main {
     background: purple;
     color: #fff;
     transition: all 1s;
+}
+
+.validation {
+    margin-left: 30px;
+    display: none;
+    font-size: 22px;
+    color: red;
+    text-shadow: #fefefe;
 }
 
 #next-btn {
@@ -175,10 +183,13 @@ ul {
 .feedback-heading {
     font-size: 32px;
     font-weight: bold;
+    color: #fefefe;
 }
 
 .feedback-ans {
     text-align: center;
+    color: #fefefe;
+    font-size: 28px;
 }
 
 .final-score {
@@ -208,13 +219,87 @@ footer {
 
 @media only screen and (max-width: 600px) {
     main {
+        margin-top: 100px;
+    }
+    .header p {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    span {
+        font-size: 14px;
+    }
+    main {
         margin: 0;
+    }
+    .startQuiz {
+        padding: 50px;
+    }
+    #submit-btn {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .validation {
+        font-size: 12px;
+    }
+    label {
+        font-size: 12px;
+    }
+    span {
+        padding: 10px;
+    }
+    .user-feedback-page {
+        padding: 15px;
+    }
+    .feedback-ans {
+        font-size: 18px;
+    }
+    #question {
+        font-size: 14px;
     }
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 320px) {
+    main {
+        margin-top: 100px;
+    }
+    .header p {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 20px;
+    }
     span {
+        font-size: 14px;
+    }
+    main {
+        margin: 0;
+    }
+    .startQuiz {
+        padding: 50px;
+    }
+    #submit-btn {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .validation {
+        font-size: 12px;
+    }
+    label {
+        font-size: 12px;
+    }
+    span {
+        padding: 10px;
+    }
+    .user-feedback-page {
+        padding: 15px;
+    }
+    .feedback-ans {
+        font-size: 18px;
+    }
+    #question {
         font-size: 14px;
     }
 }
