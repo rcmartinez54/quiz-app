@@ -258,6 +258,9 @@ footer {
     #question {
         font-size: 14px;
     }
+    .final-score {
+        padding: 45px;
+    }
 
 }
 
@@ -301,5 +304,8 @@ footer {
     }
     #question {
         font-size: 14px;
+    }
+    .final-score {
+        padding: 25px;
     }
 }
