@@ -77,10 +77,10 @@ function getQuestion() {
 function questionTemp(correct, question, questionsAnswered) {
     return `
             <h2 id="question">${question.text}</h2> 
-            <form>
+            <form class="questions">
                 <fieldset>
                     <label>
-                    <input class="answer" type="radio" name="option" checked></input><span>${question.answer1}</span>
+                    <input class="answer" type="radio" name="option"></input><span>${question.answer1}</span>
                     </label>
 
                     <label>
@@ -97,6 +97,8 @@ function questionTemp(correct, question, questionsAnswered) {
                 </fieldset>
 
                 <button id="submit-btn">Submit</button>
+
+                <p class="validation">Please make a selection before submitting</p>
             
             </form>
 
@@ -112,13 +114,18 @@ function handleSubmitBtn() {
         event.preventDefault();
         const answer = $('input:checked').siblings('span');
         const correctUserAnswer = checkUserAnswer(answer);
-        if(correctUserAnswer) {
-            generateCorrect();
+        if ($(this).parent().find('input[type="radio"]').is(':checked')) {
+            if(correctUserAnswer) {
+                generateCorrect();
+            } else {
+                generateIncorrect();
+            }
         } else {
-            generateIncorrect();
-        }
+            $('form p').fadeIn(500);
+        }       
     });
 }
+
 
 function checkUserAnswer(answer) {
     if(answer.text() === ANS[questionNumber - 1]) {
