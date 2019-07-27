@@ -17,6 +17,12 @@ body {
     font-family: 'Roboto', Sans-Serif;
 }
 
+.header p {
+    font-size: 40px;
+    margin: 0;
+    color: #fefefe;
+}
+
 h1, span, button {
     font-family: 'Droid Serif', Serif;
 }
@@ -29,14 +35,8 @@ h2 {
     font-family: 'Roboto', Sans-Serif; 
 }
 
-p {
-    font-size: 28px;
-    margin: 0;
-    color: #fff;
-}
-
 main {
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,6 +49,7 @@ main {
 .startQuiz {
     display: flex;
     flex-direction: column;
+    padding: 100px;
 }
 
 .startBtn {
@@ -110,6 +111,7 @@ h2 {
 fieldset {
     border: none;
     display: flex;
+    padding: 0 30px;
 }
 
 label {
@@ -161,7 +163,7 @@ ul {
 .user-feedback-page {
     display: flex;
     flex-direction: column;
-    padding: 0 65px;
+    padding: 30px 65px;
 }
 
 .user-feedback-page img,
@@ -182,6 +184,7 @@ ul {
 .final-score {
     display: flex;
     flex-direction: column;
+    padding: 100px;
 }
 
 #restart-btn {
@@ -204,7 +207,14 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-    p {
-        font-size: 28px;
+    main {
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    span {
+        font-size: 14px;
     }
 }
