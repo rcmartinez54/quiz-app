@@ -61,6 +61,7 @@ function startQuiz() {
     // this function will begin the quiz when user hits .startQuiz() button
     $('.startBtn').on('click', function() {
         getQuestion();
+        $('.header').remove();
     });
 }
 
